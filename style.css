@@ -1,0 +1,239 @@
+:root {
+    --title: 1.5cm;
+    --title_1: 1cm;
+    --title_2: 0.75cm;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(202, 213, 221);
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+#nav {
+    box-shadow: black 1px 1px 30px 1mm;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: #fcc133;
+    height: 1.5cm;
+    font-size: 1.5cm;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+#nav img {
+    height: 1.5cm;
+    position: fixed;
+    right: 0;
+}
+#nav .spc {
+    color: white;
+    margin-left: 1mm;
+}
+.top {
+    margin: 3cm 0 0 0;
+    width: 100%;
+    background-image: url('https://iili.io/gaGOgt.jpg');
+    background-size: cover;
+    text-shadow: 3px 1px 1px black;
+}
+#title {
+    font-size: 2cm;
+    font-weight: 3000;
+    color: #ffffff;
+    text-align: center;
+}
+#sous_title{
+    color: white;
+    text-align: justify;
+    font-size: 0.4cm;
+    font-weight: bolder;
+    padding: 3mm;
+}
+.info_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.info_top_a {
+    text-align: center;
+    width: 45%;
+    background-color: #292930;
+    color: white;
+    margin: 10mm;
+    border-radius: 5cm;
+    padding: 3mm;
+}
+.img_right {
+    width: 100%;
+
+    
+    z-index: -1;
+}
+#offres_container {
+    position: relative;
+    top: 4cm;
+}
+#offres_title {
+    clear: both;
+    text-align: center;
+    font-size: var(--title_1);
+    font-weight: bold;
+    color: #0a46b4;
+}
+#offres_sousContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.offres_items {
+    
+    width: 100%;
+    min-width: 5cm;
+}
+.offres_carte {
+    
+    background-image: url('https://cdn.pixabay.com/photo/2018/02/22/18/21/laptop-3173613_960_720.png');
+    background-position: top;
+    overflow: auto;
+    background-size: cover;
+    
+    
+    animation: offres 4s infinite;
+    color: white;
+    width: auto;
+    height: auto;
+    margin: 3mm;
+    text-align: center;
+    border: solid black 4px;
+    border-radius: 25px;
+    box-shadow: black 15px 15px 15px 4px;
+}
+
+@keyframes offres {
+    0% {border-color: #3eb650;}
+    25% {border-color: #fcc133;}
+    50% {border-color: #e12b38;}
+    75% {border-color: #292930;}
+    100% {border-color: #3eb650;}
+}
+.offres_carte_items {
+    height: 4cm;
+    -webkit-backdrop-filter: brightness(25%);
+    backdrop-filter: brightness(25%);
+}
+.offres_carte_p {
+    color: white;
+    margin: 5mm;
+}
+.offres_carte_title {
+    font-weight: bold;
+    font-size: 0.75cm;
+    margin: 0 0 1.5cm 0;
+}
+.contact_btn {
+    height: auto;
+    width: auto;
+    padding: 5mm;
+    position: relative;
+    top: 1cm;
+    font-size: 7.5mm;
+    border-radius: 2cm;
+    box-shadow: black 15px 15px 15px 4px;
+    background: linear-gradient(90deg,#0059ff,#292930,#0059ff);
+}
+.contact_btn a {
+    color: white;
+    text-decoration: none;
+}
+#footer {
+    width: 100%;
+    margin-top: 10cm;
+    padding-bottom: 5cm;
+    background-color: #292930;
+}
+.info {
+    width: 100%;
+    background: linear-gradient(90deg,#292930,#e12b38);
+    border-radius: 50cm;
+    margin: 2mm 0 2mm 0;
+}
+.info a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #fcc133;
+}
+.info p {
+    margin-left: 5mm;
+}
+.info img {
+    border-radius: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .img_right {
+        float: none;
+        width: 100%;
+    }
+    #sous_title{
+        width: 100%;
+        float: none;
+        
+    }
+    .info_top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info_top_a {
+        width: 90%;
+        font-size: 4mm;
+        background-color: #292930;
+        color: white;
+        margin: 10mm;
+        border-radius: 5cm;
+        padding: 3mm;
+    }
+    #nav {
+        font-size: 0.75cm;
+    }
+    #title {
+        font-size: 1cm;
+        text-align: center;
+    }
+    .offres_items {
+        width: 97%;
+        margin: 0 0 5mm 0;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #nav {
+        font-size: 0.65cm;
+    }
+    #title {
+        font-size: 1cm;
+        text-align: center;
+    }
+    #sous_title {
+        font-size: 3mm;
+    }
+    .info_top_a {
+        font-size: 3mm;
+    }
+    .offres_items {
+        width: 97%;
+        margin: 0 0 5mm 0;
+    }
+}
